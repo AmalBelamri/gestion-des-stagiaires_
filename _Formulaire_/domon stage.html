@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/logins/login-4/assets/css/login-4.css"> -->
+<link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Website icon" type="png"  href="./icons8-inscription-100.png">
+    
+
+
+    <link rel="stylesheet" href="demande.css">
+    <title>Votre demande de stage</title>
+</head>
+<body>
+ 
+
+  <header id="header" class="fixed-top bg-success">
+    <div class="container d-flex align-items-center justify-content-between">
+
+    </div>
+  </header>
+
+<section class="p-3 p-md-4 p-xl-5">
+    <div class="container1">
+      <div class="card border-light-subtle shadow-sm">
+        <div class="row g-0">
+          <div class="col-6 col-md-6">
+            <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="./why-us.jpg" alt="BootstrapBrain Logo">
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-body p-3 p-md-4 p-xl-5">
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-5">
+                    <h3>Votre demande de stage</h3>
+                  </div>
+                </div>
+              </div>
+              <form action="./domon.php" method="GET" enctype="multipart/form-data" onsubmit="return validateName()" >
+                <div class="row gy-3 gy-md-4 overflow-hidden">
+                  <div class="col-12">
+                    <label for="nom" class="form-label">Nom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nom" id="name" placeholder="Entrer votre Nom" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="prenom" class="form-label">Prenom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="prenom" id="prenom" value="" placeholder="Entrer votre prenom" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="email" id="email" value=""placeholder="Entrer votre email" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="password" class="form-label">mot de pass <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="password" id="password" value="" placeholder="Entrer votre mot de pass" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="" class="form-label">Filere <i class="text-danger">*</i></label>
+                    <select  name="option1" class="form-select" aria-label="Default select example" id="option" required>
+                        <option   selected >.......</option>
+                        <option value="Ingénierie chimique">Ingénierie chimique</option>
+                        <option value="Génie des procédés">Génie des procédés</option>
+                        <option value="Génie mécanique"> Génie mécanique</option>
+                        <option value="Génie électrique">Génie électrique</option>
+                        <option value="Géologie">Géologie</option>
+                        <option value="Biologie">Biologie</option>
+                        <option value="Chimie"> Chimie</option>
+                        <option value="Métallurgie"> Métallurgie</option>
+                        <option value="Gestion de l'environnement"> Gestion de l'environnement</option>
+                        <option value="Marketing"> Marketing</option>
+                        <option value="Comptabilités"> Comptabilités</option>
+                        <option value="Finance">Finance</option>
+                        <option value=" Informatique et technologies de l'information"> Informatique et technologies de l'information</option>
+                      </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="" class="form-label">duree de stage <i class="text-danger">*</i></label>
+                    <select class="form-select" aria-label="Default select example" name="mois">
+                        <option selected>....</option>
+                        <option value="1mois">1mois</option>
+                        <option value="2mois">2mois</option>
+                        <option value="3mois">3mois</option>
+                      </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="formFile" class="form-label"><h4>Importer voter cv <i class="text-danger">*</i></h4></label>
+                    <input class="form-control" type="file" id="formFile" name="cv" required>
+                  </div>  
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me" required>
+                      <label class="form-check-label text-secondary" for="remember_me">
+                        valid
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button class="btn bsb-btn-xl btn-primary"  type="submit"  name="ok">Envoyer</button>
+                    </div>
+                  </div> 
+                </div>
+              
+            </div>
+          </div>
+        </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Contact</h3>
+              <p>
+                Groupe Ocp (maroc). <br>
+                province d’El Jadida<br><br>
+                <strong>Phone:</strong> (+212) 5 23 38 99 00<br>
+                <strong>Email:</strong> dco@ocpgroup.ma<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+  
+      </div>
+    </div>
+  
+    <div class="container">
+     
+      <div class="credits">
+        EL Jadida Maroc
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
